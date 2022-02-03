@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="198" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>sales data</AnnotationText>
+          <DefaultAnnotationText>7 Sales Data.xlsx
+Query=`Amazon Sales Data$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+            <Field name="Order ID" size="255" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="V_String" />
+            <Field name="City" size="255" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="V_String" />
+            <Field name="Region" size="255" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="V_String" />
+            <Field name="Category" size="255" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="V_String" />
+            <Field name="Sub-Category" size="255" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="V_String" />
+            <Field name="Sales" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+            <Field name="Quantity" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+            <Field name="Profit" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="354" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Order ID" selected="True" />
+            <Field field="City" selected="True" />
+            <Field field="Region" selected="True" />
+            <Field field="Category" selected="True" />
+            <Field field="Sub-Category" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>optimize data</AnnotationText>
+          <DefaultAnnotationText>optimize data</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+            <Field name="Order ID" size="14" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="String" />
+            <Field name="City" size="15" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="V_String" />
+            <Field name="Region" size="9" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="String" />
+            <Field name="Category" size="15" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="String" />
+            <Field name="Sub-Category" size="11" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="String" />
+            <Field name="Sales" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+            <Field name="Quantity" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+            <Field name="Profit" source="File: D:\Alteryx+Material\Alteryx Material\Alteryx Data Files\Section 7\7 Sales Data.xlsx|||`Amazon Sales Data$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="522" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="listbox Select Incoming Fields">"Row ID","Sales","Quantity","Profit"</Value>
+          <Value name="radio Null Value">True</Value>
+          <Value name="radio User Specified Replace From Value">False</Value>
+          <Value name="updown User Replace Value">0.00000</Value>
+          <Value name="radio Mean">True</Value>
+          <Value name="radio Median">False</Value>
+          <Value name="radio Mode">False</Value>
+          <Value name="radio User Specified Replace With Value">False</Value>
+          <Value name="updown User Replace With Value">0.00000</Value>
+          <Value name="checkbox Impute Indicator">False</Value>
+          <Value name="checkbox Imputed Values Separate Field">False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>null value remove</AnnotationText>
+          <DefaultAnnotationText>null value remove</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+            <Field name="Order ID" size="14" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="City" size="15" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Region" size="9" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="Category" size="15" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="Sub-Category" size="11" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="Sales" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+            <Field name="Quantity" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+            <Field name="Profit" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Imputation_v3.yxmc" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="726" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (297)">Row ID=False,Sales=True,Quantity=False,Profit=False</Value>
+          <Value name="Radio Button (299)">False</Value>
+          <Value name="Numeric Up Down (298)">5</Value>
+          <Value name="Radio Button (301)">True</Value>
+          <Value name="Numeric Up Down (300)">5</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>sales ranking 1-5 scale</AnnotationText>
+          <DefaultAnnotationText>sales ranking 1-5 scale</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+            <Field name="Order ID" size="14" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="City" size="15" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Region" size="9" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="Category" size="15" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="Sub-Category" size="11" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="String" />
+            <Field name="Sales" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+            <Field name="Quantity" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+            <Field name="Profit" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Double" />
+            <Field name="Sales_Tile_Num" source="CrossTab:Header:FieldID:1:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="MultiFieldBinning_v2.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="438" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Order ID" />
+            <Field name="City" />
+            <Field name="Region" />
+            <Field name="Category" />
+            <Field name="Sub-Category" />
+            <Field name="*Unknown" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression><![CDATA[Uppercase(_CurrentField_)
+]]></Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="V_String" size="15" scale="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Uppercase(_CurrentField_)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="558" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Profit]/[Sales]*100" field="Profit_sale Ratio" size="19.1" type="FixedDecimal" />
+            <FormulaField expression="[Profit]/[Quantity]" field="Profit_Qty Ratio" size="19.1" type="FixedDecimal" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Profit_sale Ratio</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Profit_sale Ratio = [Profit]/[Sales]*100
+Profit_Qty Ratio = [Profit]/[Quantity]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+        <Position x="666" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TableMode>Basic</TableMode>
+          <GroupingFields orderChanged="False">
+            <Field name="Profit_Qty Ratio" />
+          </GroupingFields>
+          <Width>100%</Width>
+          <ShowHeader value="True" />
+          <ShowBarGraph value="False" />
+          <TableFields orderChanged="False">
+            <Field name="Row ID" selected="True" Alignment="Right" />
+            <Field name="Order ID" selected="True" Alignment="Left" />
+            <Field name="City" selected="True" Alignment="Left" />
+            <Field name="Region" selected="True" Alignment="Left" />
+            <Field name="Category" selected="True" Alignment="Left" />
+            <Field name="Sub-Category" selected="True" Alignment="Left" />
+            <Field name="Sales" selected="True" Alignment="Right" />
+            <Field name="Quantity" selected="True" Alignment="Right" />
+            <Field name="Profit" selected="True" Alignment="Right" />
+            <Field name="Profit_sale Ratio" selected="True" Alignment="Right" />
+            <Field name="Profit_Qty Ratio" selected="True" Alignment="Right" Width="" Places="0" />
+            <Field name="*Unknown" selected="True" Alignment="Right" />
+          </TableFields>
+          <TableStyles>
+            <Style Name="Data" Font="Arial" Size="8" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1" />
+            <Style Name="Header" Font="Arial" Size="10" TextColor="#000000" BackColor="#dbdbdb" />
+            <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)" />
+            <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000" />
+          </TableStyles>
+          <StyleRules>
+            <Rule Name="70b1bb50-f5e5-49ef-ba48-3c3ee578e8fd">
+              <RowRule value="True" />
+              <HighPrecedence value="False" />
+              <Field />
+              <Test>Formula</Test>
+              <ApplyTo>Data</ApplyTo>
+              <SimpleVar>Profit_Qty Ratio</SimpleVar>
+              <SimpleOp>&lt;</SimpleOp>
+              <SimpleConst>1</SimpleConst>
+              <Formula>[Profit_Qty Ratio]&lt;0</Formula>
+              <Style TextColor="#000000" BackColor="#ff8080" />
+              <PrettyName>Row Rule 1</PrettyName>
+            </Rule>
+          </StyleRules>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Loss data highlighted</AnnotationText>
+          <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="798" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\91921\AppData\Local\Temp\Engine_14828_fed535a20be741fba1e6fd3f6c441d74_\Engine_16688_ea5964240c204893a8b468469e55db08_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="486" y="18" width="120" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Ranking and visualization of losses</Text>
+          <Font name="Algerian" size="9.75" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="Lime" />
+          <Shape shape="2" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>salesProfit Alteryx</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c9f3e579-892c-4fb2-b4c4-672943d62214" />
+      <Telemetry>
+        <PreviousWorkflowId value="016cce76-85ac-45d3-b939-42019a5d4688" />
+        <OriginWorkflowId value="016cce76-85ac-45d3-b939-42019a5d4688" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
